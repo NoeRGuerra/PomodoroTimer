@@ -28,6 +28,10 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 #buttons {
     align-self: start;
     text-align: center;
@@ -35,4 +39,16 @@ button {
 
 .disabled {
     display: none;
+}
+
+.running {
+    background-color: #773b3b;
+}
+
+.break {
+    background-color: #356b50;
+}
+
+.finished {
+    background-color: #66cccc;
 }
