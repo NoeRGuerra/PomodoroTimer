@@ -3,7 +3,7 @@ let seconds = 0;
 let minuteDisplay = document.querySelector("#minutes");
 let secondsDisplay = document.querySelector("#seconds");
 let startButton = document.querySelector("#start");
-let stopButton = document.querySelector("#stop");
+let pauseButton = document.querySelector("#stop");
 let resetButton = document.querySelector("#reset");
 let timer;
 
@@ -26,7 +26,7 @@ function displayTime() {
 
 function toggleButtons() {
     startButton.classList.toggle("disabled");
-    stopButton.classList.toggle("disabled");
+    pauseButton.classList.toggle("disabled");
     resetButton.classList.toggle("disabled");
 }
 
@@ -35,7 +35,7 @@ startButton.addEventListener("click", () => {
     toggleButtons();
 })
 
-stopButton.addEventListener("click", () => {
+pauseButton.addEventListener("click", () => {
     clearInterval(timer);
     toggleButtons();
 });
