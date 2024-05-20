@@ -3,7 +3,7 @@ let seconds = 0;
 let minuteDisplay = document.querySelector("#minutes");
 let secondsDisplay = document.querySelector("#seconds");
 let startButton = document.querySelector("#start");
-let pauseButton = document.querySelector("#stop");
+let pauseButton = document.querySelector("#pause");
 let resetButton = document.querySelector("#reset");
 let timer;
 

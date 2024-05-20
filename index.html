@@ -6,20 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div id="timer">
-        <span id="minutes">25</span>
-        <span id="colon">:</span>
-        <span id="seconds">00</span>
+    <div class="container">
+        <div id="timer">
+            <span id="minutes">25</span>
+            <span id="colon">:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="buttons">
+            <button id="start">Start</button>
+            <button id="pause" class="disabled">Pause</button>
+            <button id="reset" class="disabled">Reset</button>
+        </div>
+        <img id="settings-icon" src="icons/gear-solid.svg" />
+
+        <div id="settings-form" class="">
+            <div class="settings-row">
+                <p>Pomodoro</p>
+                <button class="settings-btn">-</button>
+                <span id="minutes_setting" class="settings-text">25</span>
+                <button class="settings-btn">+</button>
+            </div>
+            <div class="settings-row">
+                <p>Break</p>
+                <button class="settings-btn">-</button>
+                <span id="seconds_setting" class="settings-text">0</span>
+                <button class="settings-btn">+</button>
+            </div>
+            <button id="ok-btn" class="settings-btn">Ok</button>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <div id="buttons">
-        <button id="start">Start</button>
-        <button id="stop" class="disabled">Stop</button>
-        <button id="reset" class="disabled">Reset</button>
-    </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
