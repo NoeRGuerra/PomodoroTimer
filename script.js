@@ -1,4 +1,4 @@
-let minutes = 10;
+let minutes = 25;
 let seconds = 0;
 let minuteDisplay = document.querySelector("#minutes");
 let secondsDisplay = document.querySelector("#seconds");
@@ -16,26 +16,34 @@ function counter() {
     } else {
         clearInterval(timer);
     }
+    displayTime();
+}
+
+function displayTime() {
     minuteDisplay.textContent = minutes.toString().padStart(2, 0);
     secondsDisplay.textContent = seconds.toString().padStart(2, 0);
 }
 
+function toggleButtons() {
+    startButton.classList.toggle("disabled");
+    stopButton.classList.toggle("disabled");
+    resetButton.classList.toggle("disabled");
+}
+
 startButton.addEventListener("click", () => {
     timer = setInterval(counter, 50);
-    startButton.classList.add("disabled");
-    stopButton.classList.remove("disabled");
-    resetButton.classList.remove("disabled");
+    toggleButtons();
 })
 
 stopButton.addEventListener("click", () => {
     clearInterval(timer);
-    stopButton.classList.add("disabled");
-    startButton.classList.remove("disabled");
+    toggleButtons();
 });
 
 resetButton.addEventListener("click", () => {
     minutes = 25;
     seconds = 0;
-    minuteDisplay.textContent = minutes.toString().padStart(2, 0);
-    secondsDisplay.textContent = seconds.toString().padStart(2, 0);
-})
+    clearInterval(timer);
+    displayTime();
+    toggleButtons();
+});
